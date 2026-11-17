@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Гостиница Городейский Фальварок - комфортный отдых в Несвижском районе Беларуси">
+    <title data-i18n="title">Городейский Фальварок | Гостиница</title>
+    
+    <!-- Preconnect для скорости -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Шрифты -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Иконки -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Стили -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ========== COOKIE BANNER ========== -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <p data-i18n="cookie.text">Мы используем файлы cookie для обеспечения функционирования и безопасности наших сайтов, а также для наилучшего пользовательского опыта.</p>
+            <div class="cookie-buttons">
+                <button class="btn-outline" onclick="cookieSettings()" data-i18n="cookie.settings">Настройки</button>
+                <button class="btn-outline" onclick="rejectCookies()" data-i18n="cookie.reject">Отклонить</button>
+                <button class="btn-primary" onclick="acceptCookies()" data-i18n="cookie.accept">Принять</button>
+            </div>
+        </div>
+        <button class="cookie-close" onclick="closeCookieBanner()">×</button>
+    </div>
+
+    <!-- ========== STICKY HEADER ========== -->
+    <header class="header" id="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <span class="logo__title" data-i18n="hotel.name">Городейский Фальварок</span>
+                <span class="logo__subtitle" data-i18n="hotel.subtitle">Гостиница</span>
+            </a>
+            
+            <nav class="nav" id="nav">
+                <a href="#about" class="nav__link" data-i18n="nav.about">О гостинице</a>
+                <a href="#rooms" class="nav__link" data-i18n="nav.rooms">Номера</a>
+                <a href="#entertainment" class="nav__link" data-i18n="nav.entertainment">Развлечения</a>
+                <a href="#gallery" class="nav__link" data-i18n="nav.gallery">Галерея</a>
+                <a href="#booking" class="nav__link" data-i18n="nav.booking">Бронирование</a>
+                <a href="prices.html" class="nav__link" data-i18n="nav.prices">Стоимость</a>
+                
+                <!-- Language Switcher -->
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="ru" onclick="changeLanguage('ru')">RU</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-btn" data-lang="en" onclick="changeLanguage('en')">EN</button>
+                </div>
+            </nav>
+            
+            <button class="burger" id="burger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="home">
+        <div class="hero__bg" style="background-image: url('images/hero/hero-main.jpg')"></div>
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <h1 class="hero__title">
+                <span class="title-line" data-i18n="hero.title">Городейский Фальварок</span>
+                <span class="title-subtitle" data-i18n="hero.subtitle">400 лет истории и современный комфорт</span>
+            </h1>
+            <p class="hero__text" data-i18n="hero.text">Уютная гостиница в сердце Беларуси рядом с Несвижским и Мирским замками</p>
+            <a href="#booking" class="btn-primary btn--large" data-i18n="hero.cta">Забронировать номер</a>
+        </div>
+        <div class="hero__scroll">
+            <span data-i18n="hero.scroll">Листайте вниз</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="about__grid">
+                <div class="about__content">
+                    <h2 class="section-title" data-i18n="about.title">О гостинице</h2>
+                    <div class="about__text-wrapper">
+                        <p class="about__lead" data-i18n="about.lead">Ты любишь много путешествовать? Удобно, когда знаменитые памятники находятся недалеко друг от друга? И, чтобы восстановить силы, тебе нужен комфортный отдых?</p>
+                        <p data-i18n="about.p1">Тогда <strong>гостиница "Городейский Фальварак"</strong> - это именно то самое место!</p>
+                        <p data-i18n="about.p2">Наша гостиница расположена в живописном <strong>поселке Городея Несвижского района</strong>. В окрестностях поселка в 1603 году князем Альбрехтом Радзивилом было построено одноименное имение. И уже более 400 лет эти места привлекают путешественников.</p>
+                        <p data-i18n="about.p3">С 2005 года в нашей небольшой уютной гостинице отдохнули <strong>более 11 тысяч гостей из 20 стран мира</strong>.</p>
+                        <p data-i18n="about.p4">Те, кто ценит качество обслуживания, располагающую к отдыху атмосферу, традиционную кухню, останавливаются именно у нас. Гостиница имеет свой особенный стиль. Номера оформлены в жизнерадостных светлых тонах и обставлены комфортной мебелью.</p>
+                        <p data-i18n="about.p5">Равная удаленность от главных исторических памятников страны: Несвижского и Мирского замков, позволяет туристам правильно спланировать маршрут, чтобы осталось время и для отдыха.</p>
+                    </div>
+                </div>
+                <div class="about__image parallax-element" data-speed="0.5">
+                    <img src="images/about/about.jpg" alt="Городейский Фальварок">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+<section class="rooms section" id="rooms">
+    <div class="container">
+        <h2 class="section-title" data-i18n="rooms.title">Номера и услуги</h2>
+        
+        <!-- Room Carousel -->
+        <div class="rooms__carousel-wrapper">
+            <div class="swiper rooms-carousel" id="roomsCarousel">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="room-card">
+                            <div class="room-card__image">
+                                <img src="images/rooms/single-room.jpg" alt="Одноместный номер" loading="lazy">
+                            </div>
+                            <div class="room-card__content">
+                                <h3 data-i18n="rooms.single">Одноместный</h3>
+                                <p data-i18n="rooms.single.desc">Комфортный номер для одного гостя</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="room-card">
+                            <div class="room-card__image">
+                                <img src="images/rooms/double-room.jpg" alt="Двухместный номер" loading="lazy">
+                            </div>
+                            <div class="room-card__content">
+                                <h3 data-i18n="rooms.double">Двухместный</h3>
+                                <p data-i18n="rooms.double.desc">Просторный номер для двоих</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="room-card">
+                            <div class="room-card__image">
+                                <img src="images/rooms/lux-room.jpg" alt="Люкс" loading="lazy">
+                            </div>
+                            <div class="room-card__content">
+                                <h3 data-i18n="rooms.lux">Люкс</h3>
+                                <p data-i18n="rooms.lux.desc">Премиальный номер с повышенным комфортом</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+
+            <!-- Services Grid -->
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg viewBox="0 0 64 64" class="service-svg">
+                            <path d="M32 8L8 20v24l24 12 24-12V20L32 8z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M32 32v20M20 38l12 6 12-6" fill="none" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title" data-i18n="services.comfort.title">Комфортные номера</h3>
+                    <p class="service-card__text" data-i18n="services.comfort.desc">Однокомнатные и люкс номера со всеми удобствами</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg viewBox="0 0 64 64" class="service-svg">
+                            <circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M32 20v12l8 8" fill="none" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title" data-i18n="services.247.title">Круглосуточно</h3>
+                    <p class="service-card__text" data-i18n="services.247.desc">Работаем 24/7 для вашего комфорта</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg viewBox="0 0 64 64" class="service-svg">
+                            <rect x="12" y="20" width="40" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 28h40" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title">Wi-Fi</h3>
+                    <p class="service-card__text" data-i18n="services.wifi.desc">Бесплатный интернет на всей территории</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg viewBox="0 0 64 64" class="service-svg">
+                            <path d="M32 8v48M16 24l16-16 16 16" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 56h48" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title" data-i18n="services.parking.title">Парковка</h3>
+                    <p class="service-card__text" data-i18n="services.parking.desc">Бесплатная охраняемая стоянка</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg viewBox="0 0 64 64" class="service-svg">
+                            <path d="M32 12c-8 0-16 6-16 16 0 12 16 24 16 24s16-12 16-24c0-10-8-16-16-16z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="32" cy="28" r="6" fill="none" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title" data-i18n="services.location.title">Расположение</h3>
+                    <p class="service-card__text" data-i18n="services.location.desc">Рядом с Мирским и Несвижским замками</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg viewBox="0 0 64 64" class="service-svg">
+                            <path d="M20 44V28h24v16M28 44v-8h8v8" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <rect x="16" y="16" width="32" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title" data-i18n="services.restaurant.title">Ресторан</h3>
+                    <p class="service-card__text" data-i18n="services.restaurant.desc">Белорусская и европейская кухня</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ENTERTAINMENT SECTION ========== -->
+    <section class="entertainment section" id="entertainment">
+        <div class="container">
+            <h2 class="section-title" data-i18n="entertainment.title">Куда пойти</h2>
+            
+            <!-- Boomerang Entertainment Center -->
+            <div class="entertainment__block">
+                <div class="entertainment__content">
+                    <h3 class="entertainment__title" data-i18n="entertainment.boomerang.title">Развлекательный центр "Бумеранг"</h3>
+                    <p class="entertainment__text" data-i18n="entertainment.boomerang.desc">Отличное место для любителей активного отдыха, встреч с друзьями и семейного праздника. Каждый посетитель независимо от возраста найдет себе развлечение по душе.</p>
+                    
+                    <div class="entertainment__features">
+                        <div class="feature-item">
+                            <i class="fas fa-bowling-ball"></i>
+                            <span data-i18n="entertainment.boomerang.bowling">Боулинг (для взрослых и детей)</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-table-tennis"></i>
+                            <span data-i18n="entertainment.boomerang.billiard">Русский бильярд</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-child"></i>
+                            <span data-i18n="entertainment.boomerang.kids">Детская игровая зона</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-ticket-alt"></i>
+                            <span data-i18n="entertainment.boomerang.attractions">Аттракционы</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-utensils"></i>
+                            <span data-i18n="entertainment.boomerang.restaurant">Ресторан и кафе на террасе</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-music"></i>
+                            <span data-i18n="entertainment.boomerang.disco">Ночная дискотека</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-wifi"></i>
+                            <span data-i18n="entertainment.boomerang.wifi">Бесплатный Wi-Fi</span>
+                        </div>
+                    </div>
+                    
+                    <p class="entertainment__note" data-i18n="entertainment.boomerang.parking">Для гостей клуба оборудована безопасная стоянка с системой видеонаблюдения, благоустроенный внутренний дворик с беседкой.</p>
+                </div>
+                
+                <div class="entertainment__gallery">
+                    <img src="images/boomerang/bowling.png" alt="Боулинг" class="entertainment__img parallax-element" data-speed="0.3">
+                    <img src="images/boomerang/kids.jpg" alt="Детская зона" class="entertainment__img parallax-element" data-speed="0.5">
+                    <img src="images/boomerang/billiard.jpg" alt="Бильярд" class="entertainment__img parallax-element" data-speed="0.4">
+                </div>
+            </div>
+
+            <!-- Sports Complex -->
+            <div class="entertainment__block entertainment__block--reverse">
+                <div class="entertainment__content">
+                    <h3 class="entertainment__title" data-i18n="entertainment.sports.title">Спорткомплекс</h3>
+                    <p class="entertainment__text" data-i18n="entertainment.sports.desc">Для более яркого, интенсивного отдыха мы предлагаем Вам также посетить спорткомплекс, который находится недалеко от гостиницы.</p>
+                    
+                    <ul class="entertainment__list">
+                        <li><i class="fas fa-dumbbell"></i> <span data-i18n="entertainment.sports.gym">Тренажерный зал для мужчин и женщин</span></li>
+                        <li><i class="fas fa-swimming-pool"></i> <span data-i18n="entertainment.sports.pool">Бассейн взрослый и детский</span></li>
+                        <li><i class="fas fa-hot-tub"></i> <span data-i18n="entertainment.sports.sauna">Сауна (женская, мужская)</span></li>
+                        <li><i class="fas fa-volleyball-ball"></i> <span data-i18n="entertainment.sports.hall">Спортзал (волейбол, футбол, баскетбол, настольный теннис)</span></li>
+                        <li><i class="fas fa-ice-skate"></i> <span data-i18n="entertainment.sports.rental">Прокат коньков и лыж (в зимний период)</span></li>
+                        <li><i class="fas fa-cut"></i> <span data-i18n="entertainment.sports.hairdresser">Парикмахерская</span></li>
+                    </ul>
+                </div>
+                
+                <div class="entertainment__gallery">
+                    <img src="images/sports/pool.jpg" alt="Бассейн" class="entertainment__img parallax-element" data-speed="0.6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== GALLERY SECTION (Honored Guests) ========== -->
+    <section class="gallery section" id="gallery">
+        <div class="container">
+            <h2 class="section-title" data-i18n="gallery.title">Наши гости</h2>
+            <p class="section-subtitle" data-i18n="gallery.subtitle">Почетные гости и памятные моменты</p>
+            
+            <div class="swiper guests-carousel" id="guestsCarousel">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/guests/ABelyi (1).jpg" alt="Почетный гость А. Белый" loading="lazy">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/guests/AFranskevichLaye (1).jpg" alt="Почетный гость Княгиня" loading="lazy">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/guests/AndSokolov (1).jpg" alt="Почетный гость Соколов" loading="lazy">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/guests/AntSokolov (1).jpg" alt="Почетный гость А. Соколов" loading="lazy">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BOOKING SECTION ========== -->
+    <section class="booking section" id="booking">
+        <div class="container">
+            <h2 class="section-title" data-i18n="booking.title">Бронирование</h2>
+            <p class="section-subtitle" data-i18n="booking.subtitle">Заполните форму, и мы свяжемся с вами для подтверждения</p>
+            
+            <form class="booking-form" id="bookingForm">
+                <div class="booking-form__grid">
+                    <!-- Dates -->
+                    <div class="form-group">
+                        <label class="form-label" for="checkIn" data-i18n="booking.checkIn">Дата заезда *</label>
+                        <input type="date" id="checkIn" name="checkIn" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="checkOut" data-i18n="booking.checkOut">Дата выезда *</label>
+                        <input type="date" id="checkOut" name="checkOut" class="form-input" required>
+                    </div>
+                    
+                    <!-- Guests -->
+                    <div class="form-group">
+                        <label class="form-label" for="adults" data-i18n="booking.adults">Взрослые</label>
+                        <select id="adults" name="adults" class="form-select">
+                            <option value="1">1</option>
+                            <option value="2" selected>2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="children" data-i18n="booking.children">Дети</label>
+                        <select id="children" name="children" class="form-select">
+                            <option value="0" selected>0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Room Type -->
+                    <div class="form-group form-group--full">
+                        <label class="form-label" for="roomType" data-i18n="booking.roomType">Тип номера</label>
+                        <select id="roomType" name="roomType" class="form-select">
+                            <option value="" data-i18n="booking.selectRoom">Выберите номер</option>
+                            <option value="single" data-i18n="rooms.single">Одноместный</option>
+                            <option value="double" data-i18n="rooms.double">Двухместный</option>
+                            <option value="lux1" data-i18n="rooms.lux1">Люкс (1-комнатный)</option>
+                            <option value="lux2" data-i18n="rooms.lux2">Люкс (2-комнатный, 1 санузел)</option>
+                            <option value="lux3" data-i18n="rooms.lux3">Люкс (2-комнатный, 2 санузла)</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="form-group">
+                        <label class="form-label" for="name" data-i18n="booking.name">Ваше имя *</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Иван Иванов" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="phone" data-i18n="booking.phone">Телефон *</label>
+                        <div class="phone-input-wrapper">
+                            <select id="phoneCountry" class="phone-country-select">
+                                <option value="by">BY</option>
+                                <option value="ru">RU</option>
+                            </select>
+                        <input type="tel" id="phone" name="phone" class="form-input phone-input" placeholder="+375 (__) ___-__-__" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group form-group--full">
+                        <label class="form-label" for="email" data-i18n="booking.email">Email *</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="example@mail.by">
+                    </div>
+                    
+                    <!-- Comments -->
+                    <div class="form-group form-group--full">
+                        <label class="form-label" for="comments" data-i18n="booking.comments">Пожелания</label>
+                        <textarea id="comments" name="comments" class="form-textarea" rows="3" placeholder="Дополнительная информация..."></textarea>
+                    </div>
+                </div>
+                
+                <div class="booking-form__actions">
+                    <button type="submit" class="btn-primary btn--large btn--full">
+                        <span data-i18n="booking.submit">Забронировать</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <p class="form-note" data-i18n="booking.required">* Обязательные поля для заполнения</p>
+                </div>
+            </form>
+            
+            <!-- Yandex Map -->
+            <div class="map" id="map">
+                <iframe 
+                    src="https://yandex.ru/map-widget/v1/?ll=26.513872%2C53.306460&z=16&pt=26.514802,53.305507,comma&l=map" 
+                    width="100%" 
+                    height="400" 
+                    frameborder="0" 
+                    allowfullscreen="true" 
+                    style="position:relative; border-radius: 12px;">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <h3 class="footer__title" data-i18n="hotel.name">Городейский Фальварок</h3>
+                    <p class="footer__text" data-i18n="footer.desc">Уютная гостиница в поселке Городея Несвижского района</p>
+                    <div class="footer__contacts">
+                        <p><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer.address">пос. Городея, Несвижский район</span></p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+375XXXXXXXXX">+375 (XX) XXX-XX-XX</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:info@gsr.by">info@gsr.by</a></p>
+                    </div>
+                </div>
+                
+                <div class="footer__col">
+                    <h3 class="footer__title" data-i18n="footer.info">Информация</h3>
+                    <ul class="footer__links">
+                        <li><a href="#about" data-i18n="nav.about">О гостинице</a></li>
+                        <li><a href="#rooms" data-i18n="nav.rooms">Номера</a></li>
+                        <li><a href="prices.html" data-i18n="nav.prices">Стоимость</a></li>
+                        <li><a href="#booking" data-i18n="nav.booking">Бронирование</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__col">
+                    <h3 class="footer__title" data-i18n="footer.legal">Правовая информация</h3>
+                    <ul class="footer__links">
+                        <li><a href="#" onclick="openModal('policyModal')" data-i18n="footer.policy">Политика конфиденциальности</a></li>
+                        <li><a href="#" onclick="openModal('offerModal')" data-i18n="footer.offer">Публичная оферта</a></li>
+                        <li><a href="#" onclick="openModal('cookiesModal')" data-i18n="footer.cookies">Политика cookie</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p data-i18n="footer.copyright">&copy; 2026 Гостиница "Городейский Фальварок". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== SCROLL TO TOP & MESSENGERS ========== -->
+    <div class="floating-buttons">
+        <a href="https://t.me/yourbot" class="messenger-btn messenger-btn--telegram" target="_blank" rel="noopener" aria-label="Telegram">
+            <i class="fab fa-telegram-plane"></i>
+        </a>
+        <a href="https://wa.me/375XXXXXXXXX" class="messenger-btn messenger-btn--whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="viber://chat?number=375XXXXXXXXX" class="messenger-btn messenger-btn--viber" target="_blank" rel="noopener" aria-label="Viber">
+            <i class="fab fa-viber"></i>
+        </a>
+        <button class="scroll-top" id="scrollTop" onclick="scrollToTop()" aria-label="Наверх">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <!-- ========== MODALS (Policy, Offer, Cookies) ========== -->
+    <div class="modal" id="policyModal">
+        <div class="modal__content">
+            <button class="modal__close" onclick="closeModal('policyModal')">&times;</button>
+            <h2 data-i18n="modal.policy.title">Политика конфиденциальности</h2>
+            <div class="modal__text">
+                <!-- Текст политики -->
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="offerModal">
+        <div class="modal__content">
+            <button class="modal__close" onclick="closeModal('offerModal')">&times;</button>
+            <h2 data-i18n="modal.offer.title">Публичная оферта</h2>
+            <div class="modal__text">
+                <!-- Текст оферты -->
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="cookiesModal">
+        <div class="modal__content">
+            <button class="modal__close" onclick="closeModal('cookiesModal')">&times;</button>
+            <h2 data-i18n="modal.cookies.title">Политика в отношении файлов cookie</h2>
+            <div class="modal__text">
+                <!-- Текст политики cookie -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/imask@7.1.3/dist/imask.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
